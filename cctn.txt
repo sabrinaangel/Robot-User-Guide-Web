@@ -1,0 +1,7 @@
+git add .
+git commit -m ""
+git push origin main
+
+server
+
+sudo git pull
