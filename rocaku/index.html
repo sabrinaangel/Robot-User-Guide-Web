@@ -6,7 +6,17 @@
     <title>Detail Robot | DRC Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        .step-card:hover .step-image { 
+            transform: scale(1.05); 
+        }
+        .step-image { 
+            transition: transform 0.5s ease; 
+        }
+    </style>
 </head>
 <body class="bg-white">
 
@@ -16,22 +26,27 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
                 Kembali ke Beranda
             </a>
+<div class="hidden md:flex items-center gap-8">
+    <a href="#info" class="text-sm font-medium hover:text-blue-400">Beranda</a>
+    <a href="#spesifikasi" class="text-sm font-medium hover:text-blue-400">Spesifikasi</a>
+    <a href="#arsitektur" class="text-sm font-medium hover:text-blue-400">Arsitektur</a>
+    <a href="#panduan" class="text-sm font-medium hover:text-blue-400">Panduan</a>
+    <a href="#aturan" class="text-sm font-medium hover:text-blue-400">Aturan</a>
+    <a href="#trouble" class="text-sm font-medium hover:text-blue-400">Troubleshooting</a>
+    <a href="#galeri" class="text-sm font-medium hover:text-blue-400">Galeri</a> <a href="#artikel" class="text-sm font-medium hover:text-blue-400">Artikel</a>
+</div>
         </div>
-                <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-600 uppercase tracking-widest">
-                <a href="#deskripsi" class="hover:text-blue-600 transition">Info</a>
-                <a href="#pemakaian" class="hover:text-blue-600 transition">Panduan</a>
-                <a href="#galeri" class="hover:text-blue-600 transition">Galeri</a>
-                <a href="#artikel" class="hover:text-blue-600 transition">Artikel</a>
-            </div>
     </nav>
 
-    <section class="py-16 bg-slate-50">
+
+    <section id="info" class="py-16 bg-slate-50">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Robot Catur</span>
                 <h1 class="text-5xl font-extrabold text-slate-900 mt-2 mb-6">ROCA-KU</h1>
                 <p class="text-lg text-slate-600 leading-relaxed">
-                    ROCA-KU adalah robot asisten cerdas yang dirancang untuk membantu navigasi pengunjung di gedung kampus. Dilengkapi dengan Voice Recognition dan pemetaan ruangan otomatis.
+                    ROCA-KU adalah inovasi robotika yang menggabungkan kecerdasan buatan (AI) dengan mekanika presisi. Robot ini mampu menganalisis langkah 
+                    catur menggunakan engine Stockfish dan mengeksekusinya secara fisik menggunakan lengan robotik (robotic arm) terhadap lawan manusia secara real-time.otomatis.
                 </p>
                 <div class="flex gap-4 mt-8">
                     <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 w-32 text-center">
@@ -51,7 +66,7 @@
         </div>
     </section>
 
-    <section class="py-20 container mx-auto px-6">
+    <section id="spesifikasi" class="py-20 container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-10">Spesifikasi Teknis</h2>
         <div class="grid md:grid-cols-4 gap-6">
             <div class="p-6 border border-slate-100 rounded-2xl bg-slate-50">
@@ -73,275 +88,504 @@
         </div>
     </section>
 
-<!-- SWITCH MODE -->
-<section class="py-20 bg-slate-900 text-white">
+<section id="arsitektur" class="py-16 bg-white">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-4">
-            <span class="w-12 h-px bg-slate-700"></span>
-            Panduan Pengoperasian
-            <span class="w-12 h-px bg-slate-700"></span>
-        </h2>
-
-        <div class="flex justify-center mb-16">
-            <div class="inline-flex bg-slate-800 p-1 rounded-full border border-slate-700 shadow-xl">
-                <button onclick="switchProsedur('hw')" id="btn-hw" 
-                    class="px-8 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-blue-600 text-white shadow-lg">
-                    🛠️ HARDWARE
-                </button>
-                <button onclick="switchProsedur('sw')" id="btn-sw" 
-                    class="px-8 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-400 hover:text-white">
-                    💻 SOFTWARE
-                </button>
-            </div>
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-900">🏗️ Arsitektur Sistem</h2>
+            <p class="text-slate-600 mt-2">Memahami alur kerja data dari otak digital ke gerakan mekanik.</p>
         </div>
-
-        <div class="max-w-6xl mx-auto">
-            
-            <div id="prosedur-hw" class="grid grid-cols-1 md:grid-cols-2 gap-8 block">
-                
-                <div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl hover:border-blue-500/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black shadow-lg shadow-blue-900/50">1</div>
-                        <h3 class="text-lg font-bold">Sambungkan Kabel Power</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Hubungkan kabel power ke sumber listrik 220 V agar perangkat aktif.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/2.jpeg" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-                <div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl hover:border-blue-500/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black shadow-lg shadow-blue-900/50">2</div>
-                        <h3 class="text-lg font-bold">Nyalakan Sistem</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">lPutar emergency switch ke kanan sampai lampu indikator hijau menyala.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/step2.jpg" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-                <div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl hover:border-blue-500/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black shadow-lg shadow-blue-900/50">3</div>
-                        <h3 class="text-lg font-bold">Hubungkan ke Laptop</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Sambungkan kabel USB robot ke laptop untuk mengakses software pengendali.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/step3.jpg" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-                <div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl hover:border-blue-500/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black shadow-lg shadow-blue-900/50">4</div>
-                        <h3 class="text-lg font-bold">Siapkan Papan Catur</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Atur bidak pada posisi awal permainan di papan yang tersedia.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/step4.jpg" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-                            <div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl hover:border-blue-500/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black shadow-lg shadow-blue-900/50">5</div>
-                        <h3 class="text-lg font-bold">Buka Aplikasi</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Jalankan NetBeans untuk mengakses program pengendali ROCA-KU.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/step3.jpg" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                <div class="w-12 h-12 bg-blue-600 text-white flex items-center justify-center rounded-lg mb-4 font-bold">1</div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Software Logic</h3>
+                <p class="text-sm text-slate-600">Java (NetBeans) mengintegrasikan <strong>Stockfish Engine</strong> untuk menghitung langkah terbaik menggunakan algoritma <em>Search Tree</em>.</p>
             </div>
 
-            <div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl hover:border-blue-500/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black shadow-lg shadow-blue-900/50">6</div>
-                        <h3 class="text-lg font-bold">Jalankan Program</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Klik "Run" di NetBeans, sistem siap mendeteksi bidak dan bermain otomatis.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/step4.jpg" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                <div class="w-12 h-12 bg-emerald-600 text-white flex items-center justify-center rounded-lg mb-4 font-bold">2</div>
+                <h3 class="text-xl font-semibold mb-2 text-emerald-600">Serial Protocol</h3>
+                <p class="text-sm text-slate-600">Data koordinat dikonversi menjadi sinyal serial dan dikirim melalui USB ke Mikrokontroler dengan <em>baud rate</em> tersinkronisasi.</p>
             </div>
 
-
-            </div>
-
-            <!-- SOFTWARE PROSEDUR -->
-            <div id="prosedur-sw" class="grid grid-cols-1 md:grid-cols-2 gap-8 hidden">
-        <!--1--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">1</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Membuka NetBeans IDE</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Langkah pertama adalah membuka aplikasi NetBeans IDE dengan cara klik ikon NetBeans pada desktop atau melalui menu Start. 
-                        NetBeans digunakan sebagai Integrated Development Environment (IDE) untuk menjalankan dan mengontrol program ROCAKU.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/a.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-            
-        <!--2--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">2</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Menjalankan Project ROCAKU di NetBeans</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Setelah NetBeans terbuka, pilih menu File → Open Project, kemudian buka folder project ROCAKU (Robot Catur Kampus UDINUS).
-Selanjutnya, klik tombol Run (▶) yang telah ditandai dengan garis atau panah untuk menjalankan program.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/b.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-        <!--3--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">3</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Tampilan Antarmuka Program ROCAKU Muncul</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Setelah project dijalankan, tampilan utama program ROCAKU akan muncul di layar. 
-                        Perhatikan bagian-bagian yang telah diberi tanda garis atau panah.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/c.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-        <!--4--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">4</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Memilih Mode Permainan</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Klik menu Mode Permainan (ditandai dengan garis/panah) untuk memilih jenis permainan, 
-                        seperti Player vs Robot atau Player vs Player..</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/d.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div> 
-                
-        <!--5--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">5</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Pengaturan Awal Permainan</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Atur tingkat kesulitan robot, warna bidak (hitam/putih), serta pengaturan lain dengan mengklik opsi yang telah ditandai pada layar.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/c.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-        <!--6--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">6</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Memulai Permainan</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Klik tombol Start / Mulai yang ditandai dengan panah untuk memulai permainan catur.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/d.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div> 
-
-        <!--7--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">7</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Melakukan Langkah Catur</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Pemain melakukan langkah dengan memilih bidak catur pada papan digital sesuai giliran.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/c.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-        <!--8--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">8</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Respon Robot Catur</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Robot catur akan memproses langkah pemain dan menjalankan langkah balasan secara otomatis.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/d.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div> 
-
-        <!--9--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">9</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Menghentikan atau Mengulang Permainan</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Untuk menghentikan permainan, klik tombol Stop / Reset. Untuk mengulang, pilih menu Restart.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/c.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div>
-
-        <!--10--><div class="group bg-slate-800/50 border border-slate-700 p-6 rounded-3xl">
-                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center font-black">10</div>
-                        <h3 class="text-lg font-bold text-cyan-400">Menutup Program dan NetBeans</h3>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-4">Setelah selesai, tutup jendela program ROCAKU, lalu keluar dari NetBeans IDE.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-700">
-                        <img src="img/d.png" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                    </div>
-                </div> 
-
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                <div class="w-12 h-12 bg-orange-600 text-white flex items-center justify-center rounded-lg mb-4 font-bold">3</div>
+                <h3 class="text-xl font-semibold mb-2 text-orange-600">Hardware Execution</h3>
+                <p class="text-sm text-slate-600">Arduino menerjemahkan koordinat menggunakan <strong>Inverse Kinematics</strong> untuk menggerakkan motor servo secara presisi.</p>
             </div>
         </div>
     </div>
 </section>
 
-<script>
-    function switchProsedur(target) {
-        const hw = document.getElementById('prosedur-hw');
-        const sw = document.getElementById('prosedur-sw');
-        const bHw = document.getElementById('btn-hw');
-        const bSw = document.getElementById('btn-sw');
+<!-- START SWITCH MODE -->
+<section id="panduan" class="py-20 bg-slate-900 text-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">📋 Panduan Pengoperasian</h2>
+        <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+            Pilih mode panduan sesuai kebutuhan. <span class="text-blue-400 font-semibold">Hardware</span> untuk setup fisik, <span class="text-cyan-400 font-semibold">Software</span> untuk operasi aplikasi.
+        </p>
 
-        if (target === 'hw') {
-            hw.classList.remove('hidden'); hw.classList.add('grid');
-            sw.classList.remove('grid'); sw.classList.add('hidden');
-            bHw.className = "px-8 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-blue-600 text-white shadow-lg";
-            bSw.className = "px-8 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-400 hover:text-white";
-        } else {
-            sw.classList.remove('hidden'); sw.classList.add('grid');
-            hw.classList.remove('grid'); hw.classList.add('hidden');
-            bSw.className = "px-8 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-cyan-600 text-white shadow-lg";
-            bHw.className = "px-8 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-400 hover:text-white";
-        }
-    }
-</script>
-<!-- END -->
+        <div class="flex justify-center mb-16">
+            <div class="inline-flex bg-slate-800 p-1.5 rounded-2xl border border-slate-700 shadow-2xl">
+                <button onclick="switchProsedur('hw')" id="btn-hw" 
+                    class="px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-blue-600 text-white shadow-lg flex items-center gap-2">
+                    🔧 <span>Panduan Hardware</span>
+                </button>
+                <button onclick="switchProsedur('sw')" id="btn-sw" 
+                    class="px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800 text-slate-400 hover:text-white flex items-center gap-2">
+                    💻 <span>Panduan Software</span>
+                </button>
+            </div>
+        </div>
 
-    <section class="py-20 container mx-auto px-6">
+        <!-- HARDWARE PROSEDUR -->
+        <div id="prosedur-hw" class="max-w-4xl mx-auto space-y-6">
+            
+            <!-- Langkah 1 -->
+            <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-blue-500/50 transition-all duration-300 overflow-hidden group">
+                <div class="flex flex-col md:flex-row items-stretch">
+                    <!-- Konten Teks -->
+                    <div class="flex-1 p-6 md:p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-blue-900/50">
+                                1
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Sambungkan Kabel Power</h3>
+                                <p class="text-slate-300 leading-relaxed">Hubungkan kabel power ke sumber listrik 220 V agar perangkat aktif.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gambar -->
+                    <div class="md:w-64 p-0 bg-slate-900/50">
+                        <div class="overflow-hidden aspect-square">
+                            <img src="img/2.jpeg" 
+                                class="w-full h-full object-cover step-image opacity-90 group-hover:opacity-100"
+                                alt="Kabel power terhubung">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langkah 2 -->
+            <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-blue-500/50 transition-all duration-300 overflow-hidden group">
+                <div class="flex flex-col md:flex-row items-stretch">
+                    <!-- Konten Teks -->
+                    <div class="flex-1 p-6 md:p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-blue-900/50">
+                                2
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Nyalakan Sistem</h3>
+                                <p class="text-slate-300 leading-relaxed">Putar emergency switch ke kanan sampai lampu indikator hijau menyala.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gambar -->
+                    <div class="md:w-64 p-0 bg-slate-900/50">
+                        <div class="overflow-hidden aspect-square">
+                            <img src="./img/3.jpeg" 
+                                class="w-full h-full object-cover step-image opacity-90 group-hover:opacity-100"
+                                alt="Emergency switch">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langkah 3 -->
+            <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-blue-500/50 transition-all duration-300 overflow-hidden group">
+                <div class="flex flex-col md:flex-row items-stretch">
+                    <!-- Konten Teks -->
+                    <div class="flex-1 p-6 md:p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-blue-900/50">
+                                3
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Hubungkan ke Laptop</h3>
+                                <p class="text-slate-300 leading-relaxed">Sambungkan kabel USB robot ke laptop untuk mengakses software pengendali.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gambar -->
+                    <div class="md:w-64 p-0 bg-slate-900/50">
+                        <div class="overflow-hidden aspect-square">
+                            <img src="./img/4.jpeg" 
+                                class="w-full h-full object-cover step-image opacity-90 group-hover:opacity-100"
+                                alt="Koneksi USB">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langkah 4 -->
+            <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-blue-500/50 transition-all duration-300 overflow-hidden group">
+                <div class="flex flex-col md:flex-row items-stretch">
+                    <!-- Konten Teks -->
+                    <div class="flex-1 p-6 md:p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-blue-900/50">
+                                4
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Kalibrasi & Persiapan Papan</h3>
+                                <p class="text-slate-300 leading-relaxed">Pastikan papan catur sejajar dengan basis robot dan lengan berada di Home Position (titik nol) untuk menghindari tabrakan. Susun bidak 
+                                    tepat di tengah petak agar sensor magnetik/kamera mendeteksi posisi dengan akurat, serta pastikan area jangkauan robot bebas dari hambatan fisik.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gambar -->
+                    <div class="md:w-64 p-0 bg-slate-900/50">
+                        <div class="overflow-hidden aspect-square">
+                            <img src="./img/5.jpeg" 
+                                class="w-full h-full object-cover step-image opacity-90 group-hover:opacity-100"
+                                alt="Papan catur">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SOFTWARE PROSEDUR -->
+        <div id="prosedur-sw" class="max-w-6xl mx-auto hidden">
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- Item 1 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                1
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Membuka NetBeans IDE</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Klik ikon NetBeans pada desktop atau melalui menu Start untuk membuka Integrated Development Environment.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/a.png" class="w-full h-full object-cover step-image" alt="NetBeans IDE">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                2
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Jalankan Program</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Pilih menu File > Open Project dan arahkan ke folder source code ROCA-KU. Klik tombol Run (ikon segitiga hijau) atau tekan F6 untuk memulai antarmuka. 
+                                    Program ROCAKU akan muncul dengan bagian-bagian utama yang sudah ditandai.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/b.png" class="w-full h-full object-cover step-image" alt="Project ROCAKU">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                3
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Konfigurasi Port USB</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Pilih Port COM yang sesuai (misal: COM3) untuk menghubungkan software dengan robot.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/e.png" class="w-full h-full object-cover step-image" alt="Mode Permainan">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                4
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Konfigurasi Port Serial</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Pilih port komunikasi (COM Port) yang terdeteksi pada aplikasi agar software dapat mengirimkan instruksi gerak ke perangkat keras robot.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/f.png" class="w-full h-full object-cover step-image" alt="Pengaturan">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                5
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Penentuan Mode Permainan</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Tentukan mode interaksi robot. Pilih mode "Semi" (Semi-Otomatis) pada menu drop-down. Mode ini sangat disarankan agar Anda dapat memantau 
+                                    transisi data antara langkah manual pemain dan respons robot secara lebih terkendali.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/g.png" class="w-full h-full object-cover step-image" alt="Start Game">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                6
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Penentuan Warna Bidak Robot</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Atur warna bidak yang akan dimainkan oleh komputer/robot. Dalam prosedur standar ROCA-KU, robot biasanya diatur untuk memegang bidak Hitam (Black). Pastikan pilihan ini sesuai dengan posisi bidak fisik di atas papan.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/h.png" class="w-full h-full object-cover step-image" alt="Langkah Catur">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                7
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Inisialisasi Papan (Start)</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Klik tombol "Start". Sistem akan melakukan pemindaian awal untuk memastikan posisi bidak di papan fisik sesuai dengan posisi di aplikasi.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/i.png" class="w-full h-full object-cover step-image" alt="Respon Robot">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                8
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Input Koordinat Manual (Manual Mode)</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Jika sensor papan mengalami kendala dalam mendeteksi gerak, gunakan fitur "Manual Mode". Masukkan koordinat asal (X, Y) dan koordinat tujuan (X, Y) bidak yang Anda pindahkan secara manual di aplikasi, lalu klik tombol Kirim Data agar robot dapat memproses langkah tersebut.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/k.png" class="w-full h-full object-cover step-image" alt="Stop Restart">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                9
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Indikator Konfirmasi Langkah</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Setelah Anda menekan tombol "Kirim Data" pada Manual Mode, perhatikan indikator pada layar aplikasi. Jika data berhasil diterima oleh sistem, akan muncul tampilan 
+                                    notifikasi berwarna hijau dengan tulisan "Giliranmu Bermain". Ini merupakan tanda bahwa sinkronisasi antara langkah fisik dan logika software telah sukses dilakukan.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/l.png" class="w-full h-full object-cover step-image" alt="Tutup Program">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="step-card bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center font-black text-lg shadow-lg shadow-cyan-900/50">
+                                10
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-400 mb-2">Pemutusan & Terminasi Program</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">Untuk mengakhiri sesi permainan secara aman, pertama klik tombol "Putuskan" pada panel Koneksi Arduino untuk memutus komunikasi serial antara PC dan 
+                                    robot. Setelah koneksi terputus, tekan Tombol Merah bergambar Ikon Tangan (Stop) untuk menghentikan seluruh eksekusi program dan mengembalikan sistem ke status idle.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-slate-700 aspect-video">
+                            <img src="./img/l.png" class="w-full h-full object-cover step-image" alt="Antarmuka ROCAKU">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SWITCH MODE -->
+
+<section id="aturan" class="py-16 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">⚠️ Aturan Interaksi & Keselamatan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-emerald-500">
+                <h3 class="text-xl font-bold text-emerald-600 mb-4 flex items-center">
+                    <span class="mr-2">✅</span> Lakukan (Do's)
+                </h3>
+                <ul class="space-y-3 text-slate-700">
+                    <li class="flex items-start"><span class="mr-2">•</span> Pastikan bidak tepat di tengah petak agar gripper presisi.</li>
+                    <li class="flex items-start"><span class="mr-2">•</span> Tunggu indikator "Giliranmu Bermain" sebelum melangkah.</li>
+                    <li class="flex items-start"><span class="mr-2">•</span> Gunakan Manual Mode jika sensor tidak mendeteksi gerakan.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-red-500">
+                <h3 class="text-xl font-bold text-red-600 mb-4 flex items-center">
+                    <span class="mr-2">❌</span> Jangan (Don'ts)
+                </h3>
+                <ul class="space-y-3 text-slate-700">
+                    <li class="flex items-start"><span class="mr-2">•</span> Menghalangi jalur gerak lengan robot saat beroperasi.</li>
+                    <li class="flex items-start"><span class="mr-2">•</span> Menggerakkan sendi servo secara paksa saat power menyala.</li>
+                    <li class="flex items-start"><span class="mr-2">•</span> Mengubah posisi papan catur setelah kalibrasi awal.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="trouble" class="py-20 container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-10">Penyelesaian Masalah (Troubleshooting)</h2>
         <div class="bg-white border rounded-3xl overflow-hidden shadow-sm">
             <table class="w-full text-left">
                 <thead class="bg-slate-50 border-b">
                     <tr>
-                        <th class="p-6 font-bold text-slate-600">Masalah</th>
-                        <th class="p-6 font-bold text-slate-600">Penyebab</th>
-                        <th class="p-6 font-bold text-slate-600">Solusi</th>
+                        <th class="p-6 border font-bold text-slate-600">Masalah</th>
+                        <th class="p-6 border font-bold text-slate-600">Penyebab</th>
+                        <th class="p-6 border font-bold text-slate-600">Solusi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y text-sm">
                     <tr>
-                        <td class="p-6 font-semibold">Robot Tidak Bergerak</td>
-                        <td class="p-6">Tegangan baterai di bawah 11V</td>
-                        <td class="p-6 text-blue-600 font-bold underline">Isi daya (Charging)</td>
+                        <td class="p-6 border font-semibold">Robot Tidak Bergerak</td>
+                        <td class="p-6 border">Tegangan baterai di bawah 11V</td>
+                        <td class="p-6 border text-blue-600 font-bold underline">Isi daya (Charging)</td>
                     </tr>
                     <tr>
-                        <td class="p-6 font-semibold">Sensor Macet</td>
-                        <td class="p-6">Debu pada lensa Lidar</td>
-                        <td class="p-6">Bersihkan dengan kain microfiber</td>
+                        <td class="p-6 border font-semibold">Sensor Macet</td>
+                        <td class="p-6 border">Debu pada lensa Lidar</td>
+                        <td class="p-6 border">Bersihkan dengan kain microfiber</td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 border font-semibold">Error: Stockfish Not Found</td>
+                        <td class="p-6 border">Path file .exe tidak sesuai di dalam kode.</td>
+                        <td class="p-6 border">Cek konfigurasi path project dan pastikan file stockfish.exe tersedia.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 border font-semibold">Notifikasi Hijau Tidak Muncul</td>
+                        <td class="p-6 border">Data koordinat tidak valid atau koneksi terputus.</td>
+                        <td class="p-6 border">Gunakan Manual Mode dan pastikan format koordinat benar (A1-H8).</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
+    <section id="galeri" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-900">📸 Galeri Dokumentasi</h2>
+            <p class="text-slate-600 mt-2">Momen pengembangan dan aksi ROCA-KU di lapangan.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="group relative overflow-hidden rounded-xl aspect-square bg-slate-200">
+                <img src="img/galeri1.jpg" alt="Robot Beraksi" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-xs font-medium">Uji Coba Lengan Robot</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl aspect-square bg-slate-200">
+                <img src="img/galeri2.jpg" alt="Detail Gripper" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-xs font-medium">Presisi Gripper</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl aspect-square bg-slate-200">
+                <img src="img/galeri3.jpg" alt="Team" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-xs font-medium">Proses Wiring & Perakitan</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl aspect-square bg-slate-200">
+                <img src="img/galeri4.jpg" alt="UI Software" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-xs font-medium">Antarmuka GUI NetBeans</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="artikel" class="py-20 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10">📰 Artikel & Update</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article class="flex flex-col md:flex-row bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100">
+                <div class="md:w-1/3 bg-slate-200">
+                    <img src="https://lldikti6.id/wp-content/uploads/2024/06/1R5A6257.jpg" class="h-full w-full object-cover">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <span class="text-xs font-bold text-blue-600 uppercase">Update</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">Roca-KU Pukau Seluruh Pengunjung di Festival Merdeka Belajar</h3>
+                    <p class="text-sm text-slate-600 mb-4">Inovasi dari Universitas Dian Nuswantoro (Udinus) memukau serta berikan edukasi ke seluruh pengunjung dalam negeri maupun mancanegara
+                         yang hadir di Festival Merdeka Belajar. Inovasi yang ditampilkan tersebut seperti Robot Catur Kampus Udinus (Roca-KU)...</p>
+                    <a href="https://share.google/ZvXIPPdi0B29TpLIx" class="text-sm font-bold text-slate-900 hover:underline">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <article class="flex flex-col md:flex-row bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100">
+                <div class="md:w-1/3 bg-slate-200">
+                    <img src="https://img.antaranews.com/cache/1200x800/2022/12/14/IMG_20221214_152118.jpg.webp" class="h-full w-full object-cover">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <span class="text-xs font-bold text-emerald-600 uppercase">Tech Insight</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">Robot catur Udinus Semarang kalahkan Grand Master Novendra</h3>
+                    <p class="text-sm text-slate-600 mb-4">Grand Master (GM) Novendra Priasmoro gagal mengalahkan Rocaku Gen 1.0, robot catur ciptaan Universitas Dian Nuswantoro (Udinus) Semarang...</p>
+                    <a href="https://jateng.antaranews.com/berita/476231/robot-catur-udinus-semarang-kalahkan-grand-master-novendra" class="text-sm font-bold text-slate-900 hover:underline">Baca Selengkapnya →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
     <footer class="bg-slate-50 py-12 text-center border-t">
         <p class="text-slate-400 text-sm">© 2025 Dinus Robotic Club - Engineering Documentation</p>
     </footer>
+
+    <!-- Load JavaScript eksternal -->
+    <script src="script.js"></script>
 
 </body>
 </html>

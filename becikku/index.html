@@ -21,12 +21,15 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
                 Kembali ke Beranda
             </a>
-            <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-600 uppercase tracking-widest">
-                <a href="#deskripsi" class="hover:text-blue-600 transition">Info</a>
-                <a href="#pemakaian" class="hover:text-blue-600 transition">Panduan</a>
-                <a href="#galeri" class="hover:text-blue-600 transition">Galeri</a>
-                <a href="#artikel" class="hover:text-blue-600 transition">Artikel</a>
-            </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#info" class="text-sm font-medium hover:text-blue-400">Beranda</a>
+            <a href="#spesifikasi" class="text-sm font-medium hover:text-blue-400">Spesifikasi</a>
+            <a href="#arsitektur" class="text-sm font-medium hover:text-blue-400">Arsitektur</a>
+            <a href="#panduan" class="text-sm font-medium hover:text-blue-400">Panduan</a>
+            <a href="#aturan" class="text-sm font-medium hover:text-blue-400">Aturan</a>
+            <a href="#trouble" class="text-sm font-medium hover:text-blue-400">Troubleshooting</a>
+            <a href="#galeri" class="text-sm font-medium hover:text-blue-400">Galeri</a> <a href="#artikel" class="text-sm font-medium hover:text-blue-400">Artikel</a>
+        </div>
         </div>
     </nav>
 
@@ -38,9 +41,9 @@
                     <img src="img/20230805_192858.jpg" alt="ROCA-KU" class="relative rounded-[1.5rem] shadow-2xl w-full object-cover">
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-4xl font-bold mb-6 text-gray-900 leading-tight">Mengenal Lebih Dekat <br><span class="text-blue-600">ROCA-KU</span></h2>
+                    <h2 class="text-4xl font-bold mb-6 text-gray-900 leading-tight">Mengenal Lebih Dekat <br><span class="text-blue-600">BECIK-KU</span></h2>
                     <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        Robot Catur Kampus Udinus (ROCA-KU) bukan sekadar mesin. Ia adalah perpaduan presisi <strong>sensor magnetik</strong> tinggi dan kecerdasan buatan yang mampu menandingi level permainan Grand Master.
+                        Robot Becak Listrik Kampus Udinus (BECIK-KU) bukan sekadar mesin. Ia adalah perpaduan presisi <strong>sensor magnetik</strong> tinggi dan kecerdasan buatan yang mampu menandingi level permainan Grand Master.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="p-4 bg-blue-50 rounded-xl">
@@ -57,74 +60,267 @@
         </div>
     </section>
 
-    <section id="pemakaian" class="py-24 bg-slate-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold mb-4">Langkah Penggunaan</h2>
-            <p class="text-gray-500 mb-16 max-w-xl mx-auto">Ikuti 6 langkah sederhana berikut untuk memulai pertandingan pertama Anda melawan ROCA-KU.</p>
-            
+<!-- START SWITCH MODE -->
+<section id="panduan" class="py-20 bg-slate-900 text-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">📋 Panduan Pengoperasian</h2>
+        <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+            Pilih mode panduan sesuai kebutuhan. <span class="text-blue-400 font-semibold">Hardware</span> untuk setup fisik, <span class="text-cyan-400 font-semibold">Software</span> untuk operasi aplikasi.
+        </p>
+
+        <!-- Switch Mode Button -->
+        <div class="flex justify-center mb-16">
+            <div class="inline-flex bg-slate-800 p-1.5 rounded-2xl border border-slate-700 shadow-2xl">
+                <button onclick="switchProsedur('hw')" id="btn-hw" 
+                    class="px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-blue-600 text-white shadow-lg flex items-center gap-2">
+                    🔧 <span>Panduan Hardware</span>
+                </button>
+                <button onclick="switchProsedur('sw')" id="btn-sw" 
+                    class="px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800 text-slate-400 hover:text-white flex items-center gap-2">
+                    💻 <span>Panduan Software</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- HARDWARE PROSEDUR - CARD VIEW -->
+        <div id="hw-content" class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">01</span>
-                    <div class="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <!-- Item 1 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">01</span>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
                     </div>
-                    <img src="img/becikku1.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Power Up</h3>
-                    <p class="text-gray-500 text-sm">Hubungkan kabel power ke sumber listrik 220V dengan stabil.</p>
+                    <img src="./img/coba1-2.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Sambungkan Kabel Power</h3>
+                    <p class="text-slate-300 text-sm">Hubungkan kabel power ke sumber listrik 220 V agar perangkat aktif.</p>
                 </div>
 
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">02</span>
-                    <div class="bg-green-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-green-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <!-- Item 2 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">02</span>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
                     </div>
-                    <img src="img/WhatsApp Image 2025-09-23 at 11.04.34.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Aktivasi Sistem</h3>
-                    <p class="text-gray-500 text-sm">Putar emergency switch ke kanan hingga indikator menyala hijau.</p>
+                    <img src="./img/coba2-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Nyalakan Sistem</h3>
+                    <p class="text-slate-300 text-sm">Putar emergency switch ke kanan sampai lampu indikator hijau menyala.</p>
                 </div>
 
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">03</span>
-                    <div class="bg-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                <!-- Item 3 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">03</span>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                        </svg>
                     </div>
-                    <img src="img/usb.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Koneksi Data</h3>
-                    <p class="text-gray-500 text-sm">Sambungkan kabel USB robot ke port laptop Anda.</p>
+                    <img src="./img/coba2-2.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Hubungkan ke Laptop</h3>
+                    <p class="text-slate-300 text-sm">Sambungkan kabel USB robot ke laptop untuk mengakses software pengendali.</p>
                 </div>
 
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">04</span>
-                    <div class="bg-orange-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-200">
-                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                <!-- Item 4 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">04</span>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
                     </div>
-                    <img src="img/WhatsApp Image 2025-09-23 at 11.04.37.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Setup Papan</h3>
-                    <p class="text-gray-500 text-sm">Susun bidak catur pada posisi default dengan rapi.</p>
+                    <img src="./img/coba3-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Kalibrasi & Persiapan Papan</h3>
+                    <p class="text-slate-300 text-sm">Pastikan papan sejajar dan bidak berada tepat di tengah petak.</p>
                 </div>
 
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">05</span>
-                    <div class="bg-indigo-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <!-- Item 5 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">05</span>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
                     </div>
-                    <img src="img/netbeans.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Buka NetBeans</h3>
-                    <p class="text-gray-500 text-sm">Buka proyek software pengendali melalui IDE NetBeans.</p>
+                    <img src="./img/coba3-3.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Buka Aplikasi</h3>
+                    <p class="text-slate-300 text-sm">Jalankan NetBeans untuk mengakses program pengendali ROCA-KU.</p>
                 </div>
 
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">06</span>
-                    <div class="bg-red-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-red-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/></svg>
+                <!-- Item 6 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">06</span>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                        </svg>
                     </div>
-                    <img src="img/run.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Klik Run</h3>
-                    <p class="text-gray-500 text-sm">Klik tombol Run dan robot siap memulai pertandingan.</p>
+                    <img src="./img/coba4-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Jalankan Program</h3>
+                    <p class="text-slate-300 text-sm">Klik "Run" di NetBeans, sistem siap mendeteksi bidak dan bermain otomatis.</p>
+                </div>
+
+                        <!-- Item 6 -->
+        <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+            <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">06</span>
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                    </svg>
+                </div>
+                    <img src="./img/coba5-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Jalankan Program</h3>
+                    <p class="text-slate-300 text-sm">Klik "Run" di NetBeans, sistem siap mendeteksi bidak dan bermain otomatis.</p>
                 </div>
             </div>
         </div>
-    </section>
+            </div>
+        </div>
+
+        <!-- SOFTWARE PROSEDUR - CARD VIEW -->
+        <div id="sw-content" class="max-w-6xl mx-auto hidden">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">01</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <img src="./img/a.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Membuka NetBeans IDE</h3>
+                    <p class="text-slate-300 text-sm">Klik ikon NetBeans pada desktop atau melalui menu Start.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">02</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <img src="./img/b.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Jalankan Program</h3>
+                    <p class="text-slate-300 text-sm">Pilih menu File > Open Project dan klik tombol Run.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">03</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <img src="./img/e.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Konfigurasi Port USB</h3>
+                    <p class="text-slate-300 text-sm">Pilih Port COM yang sesuai untuk koneksi dengan robot.</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">04</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <img src="./img/f.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Konfigurasi Port Serial</h3>
+                    <p class="text-slate-300 text-sm">Pilih port komunikasi yang terdeteksi pada aplikasi.</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">05</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"/>
+                        </svg>
+                    </div>
+                    <img src="./img/g.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Penentuan Mode Permainan</h3>
+                    <p class="text-slate-300 text-sm">Tentukan mode interaksi robot (disarankan mode "Semi").</p>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">06</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                        </svg>
+                    </div>
+                    <img src="./img/h.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Penentuan Warna Bidak</h3>
+                    <p class="text-slate-300 text-sm">Atur warna bidak untuk komputer/robot (biasanya bidak Hitam).</p>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">07</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <img src="./img/i.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Inisialisasi Papan (Start)</h3>
+                    <p class="text-slate-300 text-sm">Klik tombol "Start" untuk pemindaian awal posisi bidak.</p>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">08</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                        </svg>
+                    </div>
+                    <img src="./img/k.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Input Koordinat Manual</h3>
+                    <p class="text-slate-300 text-sm">Gunakan fitur "Manual Mode" jika sensor mengalami kendala.</p>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">09</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <img src="./img/l.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Indikator Konfirmasi</h3>
+                    <p class="text-slate-300 text-sm">Perhatikan notifikasi hijau "Giliranmu Bermain" setelah kirim data.</p>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-cyan-500/50">
+                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">10</span>
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <img src="./img/l.png" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Pemutusan Program</h3>
+                    <p class="text-slate-300 text-sm">Klik "Putuskan" dan tombol Stop untuk mengakhiri sesi.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END SWITCH MODE -->
+
+<!-- Load JavaScript eksternal -->
+<script src="script.js"></script>
 
     <section id="galeri" class="container mx-auto px-6 py-24">
         <h2 class="text-3xl font-bold text-center mb-16">Galeri Eksklusif</h2>
