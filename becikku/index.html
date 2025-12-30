@@ -33,32 +33,48 @@
         </div>
     </nav>
 
-    <section id="deskripsi" class="py-24">
-        <div class="container mx-auto px-6">
-            <div class="bg-white rounded-[2rem] p-8 md:p-16 shadow-xl shadow-gray-200/50 flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/2 relative">
-                    <div class="absolute -inset-4 bg-blue-100 rounded-[2rem] -rotate-3"></div>
-                    <img src="img/20230805_192858.jpg" alt="ROCA-KU" class="relative rounded-[1.5rem] shadow-2xl w-full object-cover">
-                </div>
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-4xl font-bold mb-6 text-gray-900 leading-tight">Mengenal Lebih Dekat <br><span class="text-blue-600">BECIK-KU</span></h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        Robot Becak Listrik Kampus Udinus (BECIK-KU) bukan sekadar mesin. Ia adalah perpaduan presisi <strong>sensor magnetik</strong> tinggi dan kecerdasan buatan yang mampu menandingi level permainan Grand Master.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="p-4 bg-blue-50 rounded-xl">
-                            <h4 class="font-bold text-blue-700 text-xl">High Accuracy</h4>
-                            <p class="text-sm text-blue-600/80">Sensor Magnetik 0.1mm</p>
-                        </div>
-                        <div class="p-4 bg-cyan-50 rounded-xl">
-                            <h4 class="font-bold text-cyan-700 text-xl">Auto Move</h4>
-                            <p class="text-sm text-cyan-600/80">Pencapit Otomatis</p>
-                        </div>
+    <section id="info" class="py-24 md:py-16 bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+            <!-- Gambar -->
+            <div class="relative order-1 md:order-1">
+                <div class="absolute -inset-4 md:-inset-6 bg-blue-100/60 rounded-2xl md:rounded-[1.5rem] -rotate-3"></div>
+                <img src="img/20230805_192858.jpg" alt="BECIK-KU" 
+                    class="relative rounded-xl md:rounded-2xl shadow-xl w-full h-auto object-cover">
+            </div>
+            
+            <!-- Konten -->
+            <div class="order-2 md:order-2 px-4 md:px-0">
+                <span class="text-blue-600 font-bold tracking-widest uppercase text-xs md:text-sm">Robot Becak</span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 mb-4 md:mb-6">BECIK-KU</h1>
+                <p class="text-base md:text-lg text-slate-600 leading-relaxed mb-6 md:mb-8">
+                    ROCA-KU adalah inovasi robotika yang menggabungkan kecerdasan buatan (AI) dengan mekanika presisi. 
+                    Robot ini mampu menganalisis langkah catur menggunakan engine Stockfish dan mengeksekusinya secara 
+                    fisik menggunakan lengan robotik (robotic arm) terhadap lawan manusia secara real-time.
+                </p>
+                
+                <!-- Fitur -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                        <h4 class="font-bold text-blue-700 text-lg md:text-xl mb-1">High Accuracy</h4>
+                        <p class="text-sm text-blue-600/80">Sensor Magnetik 0.1mm</p>
                     </div>
+                    <div class="p-4 bg-cyan-50 rounded-xl border border-cyan-100">
+                        <h4 class="font-bold text-cyan-700 text-lg md:text-xl mb-1">Auto Move</h4>
+                        <p class="text-sm text-cyan-600/80">Pencapit Otomatis</p>
+                    </div>
+                </div>
+                
+                <!-- Optional: Tombol atau info tambahan -->
+                <div class="mt-8 flex gap-4">
+                    <a href="#pemakaian" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                        Lihat Panduan
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <!-- START SWITCH MODE -->
 <section id="panduan" class="py-20 bg-slate-900 text-white">
@@ -87,98 +103,100 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Item 1 -->
                 <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">01</span>
+                    <span class="step-number absolute -right-3 -top-3 text-9xl font-white opacity-3">01</span>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <img src="./img/coba2-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
+                    <h3 class="text-xl font-bold mb-2 text-white">Buka kursi belakang</h3>
+                    <p class="text-slate-300 text-sm">Tarik tuas yang berada di sisi samping kursi belakang untuk membuka bagian bawah kursi
+                        belakang untuk membuka bagian bawah kursi dan mengakses komponen listrik.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
+                    <span class="step-number absolute -right-3 -top-3 text-9xl font-white opacity-3">02</span>
                     <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
                     <img src="./img/coba11.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-white">Sambungkan Kabel Power</h3>
-                    <p class="text-slate-300 text-sm">Hubungkan kabel power ke sumber listrik 220 V agar perangkat aktif.</p>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">02</span>
-                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                    </div>
-                    <img src="./img/coba2-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-white">Nyalakan Sistem</h3>
-                    <p class="text-slate-300 text-sm">Putar emergency switch ke kanan sampai lampu indikator hijau menyala.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Sambungkan soket merah</h3>
+                    <p class="text-slate-300 text-sm">Hubungkan soket merah dengan pasangannya hingga terpasang dengan kuat. 
+                        Lalu tutup kembali kursi belakang agar aman.</p>
                 </div>
 
                 <!-- Item 3 -->
                 <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">03</span>
+                    <span class="step-number absolute -right-3 -top-3 text-9xl font-white opacity-3">03</span>
                     <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
                         </svg>
                     </div>
                     <img src="./img/coba2-2.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-white">Hubungkan ke Laptop</h3>
-                    <p class="text-slate-300 text-sm">Sambungkan kabel USB robot ke laptop untuk mengakses software pengendali.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Sambungkan kabel baterai</h3>
+                    <p class="text-slate-300 text-sm">Di balik kursi belakang, hubungkan kabel baterai berwarna hitam dengan soket berwarna kuning sebagai sumber daya utama.</p>
                 </div>
 
                 <!-- Item 4 -->
                 <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">04</span>
+                    <span class="step-number absolute -right-3 -top-3 text-9xl font-white opacity-3">04</span>
                     <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
                         </svg>
                     </div>
                     <img src="./img/coba3-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-white">Kalibrasi & Persiapan Papan</h3>
-                    <p class="text-slate-300 text-sm">Pastikan papan sejajar dan bidak berada tepat di tengah petak.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Putar dua switch ke kanan</h3>
+                    <p class="text-slate-300 text-sm">Putar kedua switch yang berada di sisi depan kursi belakang ke arah kanan untuk mengaktifkan sistem listrik.</p>
                 </div>
 
                 <!-- Item 5 -->
                 <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">05</span>
+                    <span class="step-number absolute -right-3 -top-3 text-9xl font-white opacity-3">05</span>
                     <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                     </div>
                     <img src="./img/coba3-3.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-white">Buka Aplikasi</h3>
-                    <p class="text-slate-300 text-sm">Jalankan NetBeans untuk mengakses program pengendali ROCA-KU.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Aktifkan emergency button</h3>
+                    <p class="text-slate-300 text-sm">Putar emergency button ke arah kanan (posisi ON) yang terletak di sisi dalam kanan becikku agar sistem dapat dijalankan.</p>
                 </div>
 
                 <!-- Item 6 -->
                 <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">06</span>
+                    <span class="step-number absolute -right-3 -top-3 text-9xl font-white opacity-3">06</span>                    
                     <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
                         </svg>
                     </div>
                     <img src="./img/coba4-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-white">Jalankan Program</h3>
-                    <p class="text-slate-300 text-sm">Klik "Run" di NetBeans, sistem siap mendeteksi bidak dan bermain otomatis.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Ubah ke mode jalan</h3>
+                    <p class="text-slate-300 text-sm">Dorong tuas ke belakang untuk mengubah becikku dari mode diam ke mode jalan. Tuas berada di sisi kanan bawah kursi belakang.</p>
                 </div>
 
-                        <!-- Item 6 -->
+                        <!-- Item 7 -->
         <div class="group bg-slate-800/50 p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-slate-700 hover:border-blue-500/50">
-            <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-5 group-hover:opacity-10 transition-opacity">06</span>
+            <span class="step-number absolute -right-3 -top-3 text-9xl font-white opacity-3">07</span>
                 <div class="bg-gradient-to-br from-blue-600 to-blue-800 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/50">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
                     </svg>
                 </div>
                     <img src="./img/coba5-1.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-white">Jalankan Program</h3>
-                    <p class="text-slate-300 text-sm">Klik "Run" di NetBeans, sistem siap mendeteksi bidak dan bermain otomatis.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Hubungkan melalui aplikasi</h3>
+                    <p class="text-slate-300 text-sm">Buka aplikasi pengontrol becikku, masuk ke menu *Settings* (ikon gear), lalu pilih opsi *Connect to car* untuk memulai koneksi.</p>
                 </div>
             </div>
         </div>
             </div>
-        </div>
+        
 
         <!-- SOFTWARE PROSEDUR - CARD VIEW -->
         <div id="sw-content" class="max-w-6xl mx-auto hidden">
@@ -201,8 +219,8 @@
                         <p>02</p>
                     </div>
                     <img src="./img/a-2.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-[1.02]">
-                    <h3 class="text-xl font-bold mb-2 text-cyan-300">blabla</h3>
-                    <p class="text-slate-300 text-sm">blabla</p>
+                    <h3 class="text-xl font-bold mb-2 text-cyan-300">Sambungkan Bluetooth HC-05</h3>
+                    <p class="text-slate-300 text-sm">Pilih perangkat Bluetooth bernama *HC-05* untuk menghubungkan aplikasi dengan sistem kontrol becikku.</p>
                 </div>
 
                 <!-- Item 3 -->
