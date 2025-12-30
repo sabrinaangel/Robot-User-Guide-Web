@@ -4,4 +4,4 @@ git push origin main
 
 server
 
-sudo git pull
+sudo git pull 
