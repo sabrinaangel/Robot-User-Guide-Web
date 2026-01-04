@@ -17,140 +17,580 @@
 </head>
 <body class="bg-slate-50">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b">
+    <nav class="border-b sticky top-0 bg-white/80 backdrop-blur-md z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2 font-bold text-slate-800">
-                <svg class="w-5 h-5 text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-                Dinus Robotic
+            <a href="../index.html" class="flex items-center gap-2 text-blue-600 font-bold">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                Kembali ke Beranda
             </a>
-            <div class="flex gap-6 text-sm font-bold uppercase tracking-widest text-slate-500">
-                <a href="#manual" class="hover:text-main transition">Manual</a>
-                <a href="#galeri" class="hover:text-main transition">Galeri</a>
-                <a href="#berita" class="hover:text-main transition">Berita</a>
-            </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#info" class="text-sm font-medium hover:text-blue-400">Beranda</a>
+            <a href="#spesifikasi" class="text-sm font-medium hover:text-blue-400">Spesifikasi</a>
+            <a href="#arsitektur" class="text-sm font-medium hover:text-blue-400">Arsitektur</a>
+            <a href="#panduan" class="text-sm font-medium hover:text-blue-400">Panduan</a>
+            <a href="#aturan" class="text-sm font-medium hover:text-blue-400">Aturan</a>
+            <a href="#trouble" class="text-sm font-medium hover:text-blue-400">Troubleshooting</a>
+            <a href="#galeri" class="text-sm font-medium hover:text-blue-400">Galeri</a> 
+            <a href="#artikel" class="text-sm font-medium hover:text-blue-400">Artikel</a>
+        </div>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <span class="inline-block px-4 py-1 rounded-full bg-blue-100 text-main text-xs font-bold uppercase mb-4 tracking-widest">Robot Catur Inovasi</span>
-                <h1 class="text-6xl font-extrabold text-slate-900 mb-6">ROCA-KU</h1>
-                <p class="text-slate-600 text-lg leading-relaxed mb-8">Robot pecatur pertama di Indonesia yang menggabungkan presisi mekanik dengan algoritma cerdas untuk mengalahkan pemain kelas dunia.</p>
-                <div class="flex items-center gap-6 p-6 bg-white rounded-3xl shadow-sm border border-slate-100">
-                    <div><p class="text-xs text-slate-400 font-bold uppercase mb-1">Status</p><p class="font-bold text-green-600">Aktif/Operasional</p></div>
-                    <div class="w-px h-10 bg-slate-100"></div>
-                    <div><p class="text-xs text-slate-400 font-bold uppercase mb-1">Versi</p><p class="font-bold text-slate-800">v4.2.0</p></div>
+<section id="info" class="pt-32 pb-20 bg-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+            <span class="inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase mb-4 tracking-widest">Innovation by UDINUS</span>
+            <h1 class="text-6xl font-extrabold text-slate-900 mb-6">
+                <span class="text-blue-600">TOYA</span><span class="text-slate-800">-KU</span>
+            </h1>
+            <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                <span class="font-semibold text-blue-700">TOYA-KU</span> (Teknologi Olah Udara Menjadi Air - Karya Udinus) adalah alat penghasil air minum dari udara dengan sistem kondensasi dan filtrasi terintegrasi. 
+                Menghasilkan air bersih siap minum langsung dari kelembaban udara sekitar.
+            </p>
+            
+            <!-- Key features -->
+            <div class="space-y-6 mb-8">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Air dari Udara</h4>
+                        <p class="text-slate-600 text-sm">Mengubah kelembaban udara menjadi air bersih melalui proses kondensasi</p>
+                    </div>
                 </div>
-            </div>
-            <div class="order-1 md:order-2">
-                <img src="img/rocaku.jpeg" alt="Robot Image" class="rounded-[40px] shadow-2xl w-full aspect-square object-cover border-[12px] border-white">
-            </div>
-        </div>
-    </section>
-
-    <section id="manual" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Panduan Pengoperasian</h2>
-                <p class="text-slate-500">Ikuti prosedur standar berikut untuk keamanan dan performa maksimal.</p>
+                
+                <div class="flex items-start">
+                    <div class="bg-green-100 p-2 rounded-lg mr-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Filtrasi 3 Tahap</h4>
+                        <p class="text-slate-600 text-sm">Sedimen, karbon aktif, dan sterilisasi UV untuk air berkualitas tinggi</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-3xl border border-slate-100 hover:border-main transition group">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center font-bold text-xl group-hover:bg-main group-hover:text-white transition mb-6">01</div>
-                    <h3 class="text-xl font-bold mb-4">Power Initialization</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Sambungkan kabel power 220V dan putar saklar utama hingga indikator LED menyala.</p>
+            <!-- Status box -->
+            <div class="inline-flex items-center divide-x divide-slate-200 bg-slate-50 rounded-2xl p-1 border border-slate-200">
+                <div class="px-6 py-3">
+                    <p class="text-xs text-slate-500 uppercase font-bold">Status</p>
+                    <div class="flex items-center">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                        <p class="font-bold text-slate-800">Ready to Use</p>
+                    </div>
                 </div>
-                <div class="p-8 rounded-3xl border border-slate-100 hover:border-main transition group">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center font-bold text-xl group-hover:bg-main group-hover:text-white transition mb-6">02</div>
-                    <h3 class="text-xl font-bold mb-4">Software Link</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Hubungkan kabel USB ke Laptop dan jalankan aplikasi NetBeans untuk kontrol sistem.</p>
+                <div class="px-6 py-3">
+                    <p class="text-xs text-slate-500 uppercase font-bold">Konsumsi</p>
+                    <p class="font-bold text-slate-800">~400W</p>
                 </div>
-                <div class="p-8 rounded-3xl border border-slate-100 hover:border-main transition group">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center font-bold text-xl group-hover:bg-main group-hover:text-white transition mb-6">03</div>
-                    <h3 class="text-xl font-bold mb-4">Calibration</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Klik tombol 'Home' pada aplikasi agar robot melakukan kalibrasi posisi awal bidak.</p>
+                <div class="px-6 py-3">
+                    <p class="text-xs text-slate-500 uppercase font-bold">Versi</p>
+                    <p class="font-bold text-slate-800">v2.1</p>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <div class="order-1 md:order-2">
+            <div class="relative">
+                <div class="absolute -right-4 -top-4 w-32 h-32 bg-blue-100 rounded-full opacity-50"></div>
+                     <img src="./img/toyaaa.png" alt="TOYA-KU UDINUS" class="rounded-2xl shadow-lg w-full max-w-4xl mx-auto object-cover border-4 border-white">
+                
+                <!-- Water quality badge -->
+                <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full px-4 py-2 border border-blue-100">
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm font-bold text-slate-800">Air Siap Minum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="pemakaian" class="py-24 bg-slate-100">
+    <!-- SPESIFIKASI TEKNIS TOYA-KU -->
+<section id="spesifikasi" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">⚙️ Spesifikasi Teknis</h2>
+            <p class="text-slate-500 max-w-2xl mx-auto">Detail komponen dan kapasitas yang membuat TOYA-KU menjadi alat penghasil air dari udara yang efisien.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Kapasitas Produksi -->
+            <div class="p-6 border border-blue-100 rounded-2xl bg-blue-50 hover:bg-blue-100 transition-all">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-blue-800 mb-2">Kapasitas Produksi</h3>
+                <p class="text-slate-600">10-15 liter/hari (tergantung kelembaban udara)</p>
+                <p class="text-sm text-slate-500 mt-1">Optimal pada kelembaban 60-80%</p>
+            </div>
+            
+            <!-- Teknologi Kondensasi -->
+            <div class="p-6 border border-cyan-100 rounded-2xl bg-cyan-50 hover:bg-cyan-100 transition-all">
+                <div class="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-cyan-800 mb-2">Teknologi Kondensasi</h3>
+                <p class="text-slate-600">Kompresor DC Inverter & Evaporator Tembaga</p>
+                <p class="text-sm text-slate-500 mt-1">Efisiensi energi tinggi</p>
+            </div>
+            
+            <!-- Sistem Filtrasi -->
+            <div class="p-6 border border-green-100 rounded-2xl bg-green-50 hover:bg-green-100 transition-all">
+                <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-green-800 mb-2">Sistem Filtrasi 3 Tahap</h3>
+                <ul class="text-slate-600 text-sm space-y-1">
+                    <li>• Filter Sedimen</li>
+                    <li>• Karbon Aktif</li>
+                    <li>• Sterilisasi UV</li>
+                </ul>
+            </div>
+            
+            <!-- Daya Listrik -->
+            <div class="p-6 border border-orange-100 rounded-2xl bg-orange-50 hover:bg-orange-100 transition-all">
+                <div class="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-orange-800 mb-2">Konsumsi Daya</h3>
+                <p class="text-slate-600">350-500 Watt</p>
+                <p class="text-sm text-slate-500 mt-1">220V AC, 50Hz</p>
+            </div>
+            
+            <!-- Tangki Penyimpanan -->
+            <div class="p-6 border border-purple-100 rounded-2xl bg-purple-50 hover:bg-purple-100 transition-all">
+                <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-purple-800 mb-2">Tangki Penyimpanan</h3>
+                <p class="text-slate-600">Kapasitas 5 liter</p>
+                <p class="text-sm text-slate-500 mt-1">Food grade stainless steel</p>
+            </div>
+            
+            <!-- Kontrol & Interface -->
+            <div class="p-6 border border-indigo-100 rounded-2xl bg-indigo-50 hover:bg-indigo-100 transition-all">
+                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-indigo-800 mb-2">Kontrol & Interface</h3>
+                <p class="text-slate-600">Touchscreen LCD + Tombol Manual</p>
+                <p class="text-sm text-slate-500 mt-1">3 mode pengambilan air</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ARSITEKTUR SISTEM TOYA-KU -->
+<section id="arsitektur" class="py-24 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">🏗️ Arsitektur Sistem TOYA-KU</h2>
+            <p class="text-slate-600 max-w-3xl mx-auto">Memahami proses konversi udara menjadi air minum melalui sistem terintegrasi.</p>
+        </div>
+        
+        <div class="relative">
+            <!-- Garis penghubung -->
+            <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-blue-200 transform -translate-y-1/2 z-0"></div>
+            
+            <div class="grid md:grid-cols-5 gap-8 relative z-10">
+                <!-- Tahap 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">1. Intake Udara</h3>
+                    <p class="text-sm text-slate-600">Udara sekitar dihisap oleh kipas ke dalam sistem</p>
+                </div>
+                
+                <!-- Tahap 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">2. Kondensasi</h3>
+                    <p class="text-sm text-slate-600">Udara didinginkan hingga titik embun menjadi air</p>
+                </div>
+                
+                <!-- Tahap 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">3. Filtrasi</h3>
+                    <p class="text-sm text-slate-600">Air melewati 3 tahap penyaringan dan sterilisasi UV</p>
+                </div>
+                
+                <!-- Tahap 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">4. Penyimpanan</h3>
+                    <p class="text-sm text-slate-600">Air disimpan dalam tangki food grade stainless steel</p>
+                </div>
+                
+                <!-- Tahap 5 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">5. Distribusi</h3>
+                    <p class="text-sm text-slate-600">Air siap diminum melalui 3 pilihan cara pengambilan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="panduan" class="py-12 bg-blue-800">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold mb-4">Langkah Penggunaan</h2>
-            <p class="text-gray-500 mb-16 max-w-xl mx-auto">Ikuti 6 langkah sederhana berikut untuk memulai pertandingan pertama Anda melawan ROCA-KU.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="text-white text-4xl font-extrabold mb-4">Langkah Penggunaan</h2>
+    <p class="text-white mb-16 max-w-xl mx-auto">Ikuti langkah sederhana berikut untuk mengoperasikan TOYA-KU.</p>
+    <div class="grid md:grid-cols-2 gap-12">
+        <!-- langkah 1 -->
                 <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
                     <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">01</span>
-                    <div class="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <div class="bg-red-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-green-200">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
                     </div>
-                    <img src="img/becikku1.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Power Up</h3>
-                    <p class="text-gray-500 text-sm">Hubungkan kabel power ke sumber listrik 220V dengan stabil.</p>
+                    <img src="./img/1a.jpg" class="w-full h-60 aspect-[4/5] object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="text-xl font-bold mb-2">Sambungkan Daya Listrik</h3>
+                    <p class="text-gray-500 text-sm">Hubungkan adaptor ke stopkontak listrik. Pastikan kabel terpasang dengan kuat hingga layar monitor menyala.</p>
                 </div>
-
+            <!-- langkah 2 -->
                 <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
                     <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">02</span>
-                    <div class="bg-green-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-green-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <div class="bg-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-green-200">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     </div>
-                    <img src="img/WhatsApp Image 2025-09-23 at 11.04.34.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Aktivasi Sistem</h3>
-                    <p class="text-gray-500 text-sm">Putar emergency switch ke kanan hingga indikator menyala hijau.</p>
+                    <img src="./img/2b.jpg" class="w-full h-60 aspect-[4/5] object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="text-xl font-bold mb-2">Cek Tingkat Air di Layar</h3>
+                    <p class="text-gray-500 text-sm mb-2">Setelah daya tersambung, periksa tampilan layar untuk mengetahui berapa banyak air yang sudah tersedia di dalam tangki TOYA-KU.</p>
+                    <ul class="text-gray-500 text-sm list-disc pl-4 space-y-1">
+                        <li>Jika Status 0%: Air kosong. Anda harus menyalakan kondensor (lanjut ke Langkah 3)</li>
+                        <li>Jika Status Minimal 10%: Air sudah siap digunakan (langsung ke Langkah 4).</li>
+                    </ul>    
                 </div>
-
+                <!-- langkah 3 -->
                 <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
                     <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">03</span>
-                    <div class="bg-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-200">
+                    <div class="bg-green-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-200">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
                     </div>
-                    <img src="img/usb.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Koneksi Data</h3>
-                    <p class="text-gray-500 text-sm">Sambungkan kabel USB robot ke port laptop Anda.</p>
+                    <img src="./img/2c.jpg" class="w-full h-60 aspect-[4/5] object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="text-xl font-bold mb-2">Menghidupkan Kondensor (Proses Pengolahan Udara)</h3>
+                    <p class="text-gray-500 text-sm">Jika tangki air kosong, aktifkan proses produksi air dari udara sekitar. TOYA-KU akan mengubah kelembaban udara menjadi air bersih yang siap minum:</p>
+                        <ul class="text-gray-500 text-sm list-disc pl-4 space-y-1">
+                            <li class="text-gray-500 text-sm">Cara A (Layar): Tekan menu 'Nyalakan Kondensor' pada layar monitor.</li>
+                            <li class="text-gray-500 text-sm">Cara B (Manual): Tekan tombol power manual yang terletak di sisi paling kanan alat.
+                            Tunggu hingga proses pengisian mencapai minimal 10% sebelum mengambil air.</li>
+                        </ul>
                 </div>
-
+                <!-- langkah 4 -->
                 <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
                     <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">04</span>
                     <div class="bg-orange-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-200">
                          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                     </div>
-                    <img src="img/WhatsApp Image 2025-09-23 at 11.04.37.jpeg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Setup Papan</h3>
-                    <p class="text-gray-500 text-sm">Susun bidak catur pada posisi default dengan rapi.</p>
-                </div>
-
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">05</span>
-                    <div class="bg-indigo-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <img src="./img/4a.jpg" class="w-full h-60 aspect-[4/5] object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="text-xl font-bold mb-2">Pengambilan Air Siap Minum</h3>
+                    <p class="text-gray-500 text-sm">Setelah air tersedia minimal 10%, Anda bisa mengambil air siap minum dengan tiga cara berbeda sesuai preferensi dan kenyamanan Anda:</p>
+                    <ul class="text-gray-500 text-sm list-disc pl-4 space-y-1">
+                    <li class="text-gray-500 text-sm">Opsi 1 (Melalui Layar): Tekan menu 'Nyalakan Pompa' pada layar monitor.</li>
+                    <li class="text-gray-500 text-sm">Opsi 2 (Tombol Manual): Tekan tombol manual yang berada di posisi tengah pada panel TOYA-KU.</li>
+                    <li class="text-gray-500 text-sm">Opsi 3 (Sensor Otomatis): Tekan tombol manual di sisi kiri untuk mengaktifkan mode sensor. Kemudian, cukup dekatkan gelas ke arah sensor, maka air akan mengalir secara otomatis.</li>
+                    </ul>
                     </div>
-                    <img src="img/netbeans.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Buka NetBeans</h3>
-                    <p class="text-gray-500 text-sm">Buka proyek software pengendali melalui IDE NetBeans.</p>
-                </div>
-
-                <div class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden text-left border border-gray-100">
-                    <span class="step-number absolute -right-4 -top-4 text-8xl font-black opacity-10 group-hover:opacity-20 transition-opacity">06</span>
-                    <div class="bg-red-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-red-200">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/></svg>
-                    </div>
-                    <img src="img/run.jpg" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-2">Klik Run</h3>
-                    <p class="text-gray-500 text-sm">Klik tombol Run dan robot siap memulai pertandingan.</p>
-                </div>
             </div>
         </div>
     </section>
+
+<!-- ATURAN KESELAMATAN TOYA-KU -->
+<section id="aturan" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">⚠️ Aturan Penggunaan & Keselamatan</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">Panduan penting untuk menjaga keawetan alat dan keselamatan pengguna.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Do's -->
+            <div class="bg-green-50 p-8 rounded-3xl border-2 border-green-200">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-800">Yang Harus Dilakukan</h3>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-green-600 font-bold mr-3">✓</span>
+                        <div>
+                            <h4 class="font-semibold text-green-700">Posisikan di Area Berventilasi</h4>
+                            <p class="text-slate-600 text-sm mt-1">Tempatkan TOYA-KU di ruangan dengan sirkulasi udara baik untuk efisiensi produksi air maksimal.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 font-bold mr-3">✓</span>
+                        <div>
+                            <h4 class="font-semibold text-green-700">Bersihkan Filter Berkala</h4>
+                            <p class="text-slate-600 text-sm mt-1">Lakukan pembersihan filter udara setiap 3 bulan sekali atau sesuai indikator di layar.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 font-bold mr-3">✓</span>
+                        <div>
+                            <h4 class="font-semibold text-green-700">Matikan Saat Tidak Digunakan</h4>
+                            <p class="text-slate-600 text-sm mt-1">Hemat energi dengan mematikan daya saat TOYA-KU tidak akan digunakan dalam waktu lama.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Don'ts -->
+            <div class="bg-red-50 p-8 rounded-3xl border-2 border-red-200">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-red-800">Yang Harus Dihindari</h3>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-red-600 font-bold mr-3">✗</span>
+                        <div>
+                            <h4 class="font-semibold text-red-700">Jangan Pindahkan Saat Beroperasi</h4>
+                            <p class="text-slate-600 text-sm mt-1">Hindari memindahkan TOYA-KU saat sedang memproduksi atau mengeluarkan air.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 font-bold mr-3">✗</span>
+                        <div>
+                            <h4 class="font-semibold text-red-700">Jangan Tutup Ventilasi</h4>
+                            <p class="text-slate-600 text-sm mt-1">Pastikan lubang udara masuk dan keluar tidak tertutup benda apapun.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 font-bold mr-3">✗</span>
+                        <div>
+                            <h4 class="font-semibold text-red-700">Hindari Sumber Panas Langsung</h4>
+                            <p class="text-slate-600 text-sm mt-1">Jangan letakkan dekat kompor, radiator, atau sumber panas lainnya.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Tips Perawatan -->
+        <div class="bg-blue-50 p-8 rounded-3xl border-2 border-blue-200">
+            <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Tips Perawatan Berkala
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-2xl">
+                    <div class="text-blue-600 font-bold mb-2">Harian</div>
+                    <p class="text-sm text-slate-600">Bersihkan wadah penampung air dengan air hangat</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl">
+                    <div class="text-blue-600 font-bold mb-2">Bulanan</div>
+                    <p class="text-sm text-slate-600">Cek dan bersihkan filter udara dari debu dan kotoran</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl">
+                    <div class="text-blue-600 font-bold mb-2">6 Bulanan</div>
+                    <p class="text-sm text-slate-600">Ganti filter karbon aktif dan lampu UV sesuai petunjuk</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TROUBLESHOOTING TOYA-KU -->
+<section id="trouble" class="py-24 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">🔧 Troubleshooting & Solusi Masalah</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">Panduan mengatasi masalah umum yang mungkin terjadi pada TOYA-KU.</p>
+        </div>
+        
+        <div class="bg-white rounded-3xl shadow-sm overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-blue-50">
+                        <tr>
+                            <th class="p-6 text-left font-bold text-blue-800">Masalah</th>
+                            <th class="p-6 text-left font-bold text-blue-800">Kemungkinan Penyebab</th>
+                            <th class="p-6 text-left font-bold text-blue-800">Solusi</th>
+                            <th class="p-6 text-left font-bold text-blue-800">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-6 font-semibold text-slate-800">Layar tidak menyala</td>
+                            <td class="p-6 text-slate-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Adaptor tidak terhubung</li>
+                                    <li>Stopkontak tidak berdaya</li>
+                                    <li>Kabel adaptor rusak</li>
+                                </ul>
+                            </td>
+                            <td class="p-6">
+                                <ol class="list-decimal pl-4 space-y-1">
+                                    <li>Periksa koneksi adaptor ke stopkontak</li>
+                                    <li>Coba di stopkontak lain</li>
+                                    <li>Hubungi technical support jika tetap tidak menyala</li>
+                                </ol>
+                            </td>
+                            <td class="p-6">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-bold">UMUM</span>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-6 font-semibold text-slate-800">Produksi air sangat lambat</td>
+                            <td class="p-6 text-slate-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Kelembaban udara rendah (&lt;30%)</li>
+                                    <li>Filter udara kotor</li>
+                                    <li>Suhu ruangan terlalu dingin</li>
+                                </ul>
+                            </td>
+                            <td class="p-6">
+                                <ol class="list-decimal pl-4 space-y-1">
+                                    <li>Pindahkan ke ruangan dengan kelembaban lebih tinggi</li>
+                                    <li>Bersihkan filter udara</li>
+                                    <li>Tunggu hingga suhu ruangan optimal (25-35°C)</li>
+                                </ol>
+                            </td>
+                            <td class="p-6">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold">SEDANG</span>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-6 font-semibold text-slate-800">Air tidak keluar saat tombol ditekan</td>
+                            <td class="p-6 text-slate-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Tangki air kosong</li>
+                                    <li>Pompa air bermasalah</li>
+                                    <li>Saluran air tersumbat</li>
+                                </ul>
+                            </td>
+                            <td class="p-6">
+                                <ol class="list-decimal pl-4 space-y-1">
+                                    <li>Periksa status air di layar monitor</li>
+                                    <li>Bersihkan nozzle pengeluaran air</li>
+                                    <li>Restart alat dengan mencabut dan menyambung kembali daya</li>
+                                </ol>
+                            </td>
+                            <td class="p-6">
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-bold">PENTING</span>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-6 font-semibold text-slate-800">Sensor otomatis tidak bekerja</td>
+                            <td class="p-6 text-slate-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Mode sensor tidak aktif</li>
+                                    <li>Sensor kotor/debu</li>
+                                    <li>Gelas tidak dalam posisi yang benar</li>
+                                </ul>
+                            </td>
+                            <td class="p-6">
+                                <ol class="list-decimal pl-4 space-y-1">
+                                    <li>Pastikan mode sensor telah diaktifkan (tombol kiri)</li>
+                                    <li>Bersihkan sensor dengan kain lembut</li>
+                                    <li>Dekatkan gelas tepat di depan sensor dengan jarak 5-10 cm</li>
+                                </ol>
+                            </td>
+                            <td class="p-6">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold">RINGAN</span>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-6 font-semibold text-slate-800">Indikator error berkedip merah</td>
+                            <td class="p-6 text-slate-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Sistem perlu reset</li>
+                                    <li>Komponen internal overheating</li>
+                                    <li>Kesalahan sistem</li>
+                                </ul>
+                            </td>
+                            <td class="p-6">
+                                <ol class="list-decimal pl-4 space-y-1">
+                                    <li>Cabut daya selama 5 menit, lalu sambung kembali</li>
+                                    <li>Pastikan ventilasi tidak tertutup</li>
+                                    <li>Hubungi technical support untuk diagnosis lebih lanjut</li>
+                                </ol>
+                            </td>
+                            <td class="p-6">
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-bold">KRITIS</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="p-8 bg-blue-50 border-t">
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <div>
+                        <h4 class="font-bold text-blue-800 mb-2">Catatan Penting</h4>
+                        <p class="text-slate-600 text-sm">Jika masalah berlanjut setelah mencoba semua solusi di atas, segera hubungi technical support DRC di <span class="font-semibold">(024) 1234-5678</span> atau email <span class="font-semibold">support@toyaku.udinus.ac.id</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="galeri" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12">Dokumentasi Visual</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="col-span-2 row-span-2">
-                    <img src="img/rocaku_1.jpg" class="w-full h-full object-cover rounded-3xl shadow-lg hover:scale-[1.02] transition">
+                    <img src="./img/" class="w-full h-full object-cover rounded-3xl shadow-lg hover:scale-[1.02] transition">
                 </div>
                 <div class="col-span-2">
                     <img src="img/rocaku_2.jpg" class="w-full h-48 object-cover rounded-3xl shadow-lg hover:scale-[1.02] transition">
@@ -167,36 +607,36 @@
         </div>
     </section>
 
-    <section id="berita" class="py-24 bg-white">
+    <section id="artikel" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12">Berita & Riset Terkait</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="group cursor-pointer">
                     <div class="overflow-hidden rounded-[2rem] mb-6">
-                        <img src="https://dinus.ac.id/wp-content/uploads/2023/06/afa28-whatsapp-image-2022-12-14-at-16.57.50-1080x675.webp" class="w-full h-[300px] object-cover group-hover:scale-105 transition duration-500">
+                        <img src="https://humas.jatengprov.go.id/foto/1757542546270-IMG-20250908-WA0160_detail.png" class="w-full h-[300px] object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="flex items-center gap-4 mb-4">
                         <span class="text-xs font-bold text-main uppercase">Kompetisi</span>
                         <span class="text-xs text-slate-400 font-bold">12 Juni 2024</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-main transition">ROCA-KU Kembali Taklukkan Grand Master Nasional</h3>
-                    <p class="text-slate-500 leading-relaxed mb-6">Dalam ajang pameran teknologi tahunan, ROCA-KU berhasil menunjukkan dominasinya dengan memenangkan dua babak sekaligus...</p>
-                    <a href="#" class="font-bold text-main flex items-center gap-2">Baca Selengkapnya <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-main transition">Apresiasi TOYAKU, Gubernur Dorong Mahasiswa Terus Ciptakan Inovasi</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Menurutnya, inovasi ini sangat bermanfaat, khususnya di daerah-daerah yang kerapkali mengalami kekeringan.</p>
+                    <a href="" class="font-bold text-main flex items-center gap-2">Baca Selengkapnya <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
                 </div>
 
                 <div class="space-y-8">
                     <div class="flex gap-6 items-center group cursor-pointer">
-                        <img src="https://lldikti6.id/wp-content/uploads/2024/06/1R5A6257.jpg" class="w-32 h-32 rounded-2xl object-cover">
+                        <img src="https://thumb.viva.id/vivabanyumas/1265x711/2025/09/09/68bf5340dff18-toyaku-inovasi-udinus-penyedia-air-bersih-dari-udara_banyumas.jpg" class="w-32 h-32 rounded-2xl object-cover">
                         <div>
-                            <h4 class="font-bold group-hover:text-main transition mb-2">Penerapan Sensor Magnetik pada Laju Bidak</h4>
-                            <p class="text-sm text-slate-500 line-clamp-2">Teknologi sensor terbaru memungkinkan robot mendeteksi gerakan bidak dalam waktu kurang dari 0.5 detik.</p>
+                            <h4 class="font-bold group-hover:text-main transition mb-2">Inovasi Mahasiswa Udinus Toyaku Ubah Udara Jadi Air Bersih, Gubernur Jateng Ahmad Luthfi: Luar Biasa</h4>
+                            <p class="text-sm text-slate-500 line-clamp-2">Gubernur Jawa Tengah Ahmad Luthfi memberikan apresiasi tinggi terhadap inovasi mahasiswa Universitas Dian Nuswantoro (Udinus) Semarang, yang berhasil menciptakan--.</p>
                         </div>
                     </div>
                     <div class="flex gap-6 items-center group cursor-pointer">
-                        <img src="img/run.jpg" class="w-32 h-32 rounded-2xl object-cover">
+                        <img src="https://cdn.rri.co.id/berita/Semarang/o/1757385657350-1000149762/94lp4c2svnr87dk.jpeg" class="w-32 h-32 rounded-2xl object-cover">
                         <div>
-                            <h4 class="font-bold group-hover:text-main transition mb-2">Update Software ROCA-KU versi 4.2</h4>
-                            <p class="text-sm text-slate-500 line-clamp-2">Peningkatan algoritma pencarian langkah (Minimax) yang lebih efisien dan hemat daya.</p>
+                            <h4 class="font-bold group-hover:text-main transition mb-2">Udinus Dukung Pemprov Jateng Lewat Inovasi Toyaku</h4>
+                            <p class="text-sm text-slate-500 line-clamp-2">Kualitas air yang siap minum ini, kata Rektor, sudah dilakukan uji di Departemen Kesehatan di Dinas Kesehatan kota Semarang dan hasilnya layak minum.</p>
                         </div>
                     </div>
                 </div>
@@ -204,8 +644,8 @@
         </div>
     </section>
 
-    <footer class="py-12 border-t text-center">
-        <p class="text-slate-400 text-sm font-medium">Dokumentasi Teknis DRC © 2025 • Universitas Dian Nuswantoro</p>
+    <footer class="py-4 border-t text-center">
+        <p class="text-slate-400 text-sm font-medium">TOYA-KU|DRC © 2025 • Universitas Dian Nuswantoro</p>
     </footer>
 
 </body>
