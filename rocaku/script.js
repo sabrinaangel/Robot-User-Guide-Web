@@ -37,20 +37,20 @@ function switchProsedur(target) {
         swSection.classList.add('hidden');
         
         // Update tombol Hardware
-        btnHw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-blue-600 text-white shadow-lg flex items-center gap-2";
+        btnHw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#334EAC] text-white shadow-lg flex items-center gap-2";
         
         // Update tombol Software
-        btnSw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800 text-slate-400 hover:text-white flex items-center gap-2";
+        btnSw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#081F5C] text-slate-400 hover:text-white flex items-center gap-2";
     } else {
         // Tampilkan Software, sembunyikan Hardware
         swSection.classList.remove('hidden');
         hwSection.classList.add('hidden');
         
         // Update tombol Software
-        btnSw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-cyan-600 text-white shadow-lg flex items-center gap-2";
+        btnSw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#334EAC] text-white shadow-lg flex items-center gap-2";
         
         // Update tombol Hardware
-        btnHw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-800 text-slate-400 hover:text-white flex items-center gap-2";
+        btnHw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#081F5C] text-slate-400 hover:text-white flex items-center gap-2";
     }
 }
 
