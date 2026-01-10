@@ -37,7 +37,7 @@ function switchProsedur(target) {
         swSection.classList.add('hidden');
         
         // Update tombol Hardware
-        btnHw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#081F5C] text-white shadow-lg flex items-center gap-2";
+        btnHw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#334EAC] text-white shadow-lg flex items-center gap-2";
         
         // Update tombol Software
         btnSw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#081F5C] text-white hover:text-white flex items-center gap-2";
@@ -47,7 +47,7 @@ function switchProsedur(target) {
         hwSection.classList.add('hidden');
         
         // Update tombol Software
-        btnSw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#081F5C] text-white shadow-lg flex items-center gap-2";
+        btnSw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#334EAC] text-white shadow-lg flex items-center gap-2";
         
         // Update tombol Hardware
         btnHw.className = "px-10 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-[#081F5C] text-slate-400 hover:text-white flex items-center gap-2";
